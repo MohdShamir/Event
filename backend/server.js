@@ -22,19 +22,16 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch(err => console.error("MongoDB connection error:", err));
 
 // Routes
-<<<<<<< HEAD
-app.use("/api/auth", require("./routes/authRoutes"));
-app.use("/api/events", require("./routes/eventRoutes"));
-=======
+
 app.use("/api/auth", require("./Routes/authRoutes"));
->>>>>>> ece6f660af211e261183b149a589a255bfc26b51
+app.use("/api/events", require("./Routes/eventRoutes"));
 
 // Serve uploads
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Test root route
 app.get("/", (req, res) => {
-  res.send("Backend is running ✅");
+  res.send("Backend is running ");
 });
 
 const PORT = process.env.PORT || 5000;

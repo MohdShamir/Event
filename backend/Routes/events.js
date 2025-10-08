@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Event = require("../models/Event");
-const authMiddleware = require("../middleware/auth");
-import connectDB from "../../server/db.js";
+const Event = require("../models/Event.js");
+const authMiddleware = require("../middleware/auth.js");
 
 export default async function handler(req, res) {
   if (req.method === "GET") {

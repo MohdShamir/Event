@@ -22,8 +22,12 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch(err => console.error("MongoDB connection error:", err));
 
 // Routes
+<<<<<<< HEAD
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/events", require("./routes/eventRoutes"));
+=======
+app.use("/api/auth", require("./Routes/authRoutes"));
+>>>>>>> ece6f660af211e261183b149a589a255bfc26b51
 
 // Serve uploads
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
